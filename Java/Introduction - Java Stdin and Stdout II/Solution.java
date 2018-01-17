@@ -7,7 +7,7 @@ public class Solution {
         Scanner scan = new Scanner(System.in);
         int i = scan.nextInt();
         double d = scan.nextDouble();
-        String s = scan.nextLine(); // because  because of this, the last newline character for that line of integer input is still
+        String s = scan.nextLine(); // because the last newline character for that line of double input is still
                                     // queued in the input buffer
         s = scan.nextLine();
 
