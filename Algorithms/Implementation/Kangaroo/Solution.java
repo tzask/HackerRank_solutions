@@ -4,20 +4,15 @@ import java.util.*;
 public class Solution {
     static String kangaroo(int x1, int v1, int x2, int v2) {
         //x1 < x2 always
-        int difference = 0;
+        String answer;
         if(v1 <= v2) {
-            return "NO";
+            answer = "NO";
         } else {
-            while(difference >= 0 && 
-                  x1 <= Integer.MAX_VALUE && 
-                  x2 <= Integer.MAX_VALUE) {
-                x1 += v1;
-                x2 += v2;
-                difference = x2 - x1;
-                if(difference == 0) return "YES";
-            }
-            return "NO";
+            if((x2-x1) % (v1-v2) == 0) answer = "YES";
+            else answer = "NO";
         }
+        
+        return answer; 
     }
 
     public static void main(String[] args) {
